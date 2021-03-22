@@ -2,14 +2,15 @@
 A simple tool used to make massive YouTube blocked words easier to edit. 
 
 ## Example
-Input:
-  a,a,a,a,vds,wae,asc,sss,vv,s,c,a,d,xx
+Input:  
+    vds,wae,asc,a,a,a,a,sss,vv,s,c,a,d,xx
 
-Output:
-c, \n
-s,
-d,
-xx,
-vds,
-wae,
+Output:  
+a,  
+c,  
+s,  
+d,  
+xx,  
+vds,  
+wae,  
 sss
