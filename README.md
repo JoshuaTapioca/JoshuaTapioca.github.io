@@ -6,7 +6,7 @@ Input:
   a,a,a,a,vds,wae,asc,sss,vv,s,c,a,d,xx
 
 Output:
-c,
+c, \n
 s,
 d,
 xx,
