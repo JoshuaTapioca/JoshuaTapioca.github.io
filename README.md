@@ -6,10 +6,10 @@ Input:
   a,a,a,a,vds,wae,asc,sss,vv,s,c,a,d,xx
 
 Output:
-  c,
-  s,
-  d,
-  xx,
-  vds,
-  wae,
-  sss
+c,
+s,
+d,
+xx,
+vds,
+wae,
+sss
