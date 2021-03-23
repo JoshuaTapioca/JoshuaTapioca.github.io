@@ -41,8 +41,12 @@
                         <div class="card">
                             <table class="table mb-0 bg-light">
                                 <tbody>
+                                  <tr>
+                                      <th class="border-top-0">&emsp;Input</th>
+                                      <td class="border-top-0 text-right" id="incount">0</td>
+                                  </tr>
                                     <tr>
-                                        <th class="border-top-0">&emsp;Lines</th>
+                                        <th class="border-top-0">&emsp;Output</th>
                                         <td class="border-top-0 text-right" id="totaled">0</td>
                                     </tr>
                                 </tbody>
@@ -52,6 +56,16 @@
                                 <button id="output" class="list-group-item list-group-item-action list-group-item-primary text-center">Show Output</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col mt-4">
+                        <button type="button" id="add_sample" class="list-group-item list-group-item-action list-group-item-secondary text-center ">Example</button>
+                    </div>
+                    <div class="col mt-4">
+                        <button type="button" id="stress_test" class="list-group-item list-group-item-action list-group-item-secondary text-center ">Stress Test</button>
                     </div>
                 </div>
 
@@ -67,7 +81,7 @@
   <div class="col-md-10">
     <h2 id="Example">Example</h2>
     <p>Input:</p>
-    <pre><code>  a,vds,wae,asc,sss,sss,asmr,sss,vv,s,c,a,a,a,d,xx
+    <pre><code>  vds,wae,asc,sss,sss,sss,asmr,a,vv,s,c,d,xx
     </code></pre>
     <p>Output:</p>
     <pre><code>  a,
@@ -85,6 +99,7 @@
   </div>
 </div>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/script_test.js"></script>
 </main>
 
 <footer class="bd-footer text-muted">

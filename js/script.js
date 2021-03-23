@@ -1,9 +1,13 @@
 var text, counts, uniqCount;
 
 document.querySelector('#output').onclick = function() {
+
     count();
 
     text += ",";
+
+    document.querySelector('#incount').innerText = text.replace(/[^","]/g, "").length;
+
 
     let availableData = text;
     let desiredData = replaceCommaLine(availableData);
@@ -29,7 +33,7 @@ document.querySelector('#output').onclick = function() {
     }
 
 
-    document.querySelector('#totaled').innerText = uniqueLines.length;
+    document.querySelector('#totaled').innerText = uniqueLines.length - 1;
 
 
     var sorting = uniqueLinesText;
@@ -53,6 +57,7 @@ document.querySelector('#clear').onclick = function() {
   text = '';
   counts = [];
   uniqCount = [];
+  document.querySelector('#incount').innerText = 0;
   document.querySelector('#totaled').innerText = 0;
   document.querySelector('#output').classList.remove('disabled');
   document.querySelector('#input').value = '';
@@ -66,6 +71,7 @@ function count() {
     counts = [];
     uniqCount = [];
 
+    document.querySelector('#incount').innerText = 0;
     document.querySelector('#totaled').innerText = 0;
     document.querySelector('#output').classList.remove('disabled');
     text = document.querySelector('#input').value;

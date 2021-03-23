@@ -9,7 +9,7 @@ Make YouTube blocked words easier to edit.
 
 ### Input:
 ```
-a,vds,wae,asc,sss,sss,asmr,sss,vv,s,c,a,a,a,d,xx
+vds,wae,asc,sss,sss,sss,asmr,a,vv,s,c,d,xx
 ```
 
 
