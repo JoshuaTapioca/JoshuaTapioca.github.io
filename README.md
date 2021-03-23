@@ -2,6 +2,9 @@
 
 Make YouTube blocked words easier to edit.
 
+[Demo page (github.io)](https://joshuatapioca.github.io/blocked-words-filter/)
+
+
 ## Example
 
 ### Input:
