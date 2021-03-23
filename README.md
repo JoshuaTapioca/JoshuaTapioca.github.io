@@ -1,23 +1,26 @@
 # YouTube Blocked Words editor
 
-Make YouTube blocked words easier to edit. 
+Make YouTube blocked words easier to edit.
 
 ## Example
 
 ### Input:
 ```
-vds,wae,asc,a,a,a,a,sss,vv,s,c,a,d,xx
+a,vds,wae,asc,sss,sss,asmr,sss,vv,s,c,a,a,a,d,xx
 ```
 
 
 ### Output:
 ```
-a,  
-c,  
-s,  
-d,  
-xx,  
-vds,  
-wae,  
+a,
+s,
+c,
+d,
+vv,
+xx,
+vds,
+wae,
+asc,
 sss,
+asmr,
 ```
