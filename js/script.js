@@ -73,14 +73,16 @@ window.onload = init;
 
 
 
-var keyinput = document.getElementById("input");
+// avoid unexpected output overwriting by pressing Enter key
 
-keyinput.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    document.getElementById("output").click();
-  }
-});
+// var keyinput = document.getElementById("input");
+//
+// keyinput.addEventListener("keyup", function(event) {
+//   if (event.keyCode === 13) {
+//     event.preventDefault();
+//     document.getElementById("output").click();
+//   }
+// });
 
 
 
