@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.css" integrity="sha512-zTLt9JxNhBSmCBcrxhMvLQFF2XI0DZ1WkWIYCuj/Z5NhK3o+bU092G2lgnLHuTIIap7rtJ8p45TV9GQP1B63Kw==" crossorigin="anonymous">
-    <title>YouTube's blocked words organizer</title>
+    <title>YouTube's blocked words editor</title>
 </head>
 <body>
-<br>
+
   <main class="container">
   <p></p>
   <p></p>
@@ -21,8 +21,8 @@
         <div class="row">
             <div class="col">
                 <div class="form-group">
-                    <textarea class="form-control" id="input" rows="10" placeholder='Paste "Blocked words" here' spellcheck="false" autofocus></textarea>
-                    <textarea class="form-control" id="result" rows="10" placeholder='result'></textarea>
+                    <textarea class="form-control" id="input" rows="10" placeholder='Paste "blocked words" here' spellcheck="false" autofocus></textarea>
+                    <textarea class="form-control" id="result" rows="10" placeholder='Result  (recognizable to YouTube "blocked words")'></textarea>
                 </div>
             </div>
 
@@ -75,29 +75,7 @@
   </div>
 
 <br>
-<br>
-<br>
-<div class="row">
-  <div class="col-md-10">
-    <h2 id="Example">Example</h2>
-    <p>Input:</p>
-    <pre><code>  vds,wae,asc,sss,sss,sss,asmr,a,vv,s,c,d,xx
-    </code></pre>
-    <p>Output:</p>
-    <pre><code>  a,
-  s,
-  c,
-  d,
-  vv,
-  xx,
-  vds,
-  wae,
-  asc,
-  sss,
-  asmr,
-</code></pre>
-  </div>
-</div>
+
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/script_test.js"></script>
 </main>

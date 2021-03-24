@@ -59,11 +59,32 @@ document.querySelector('#clear').onclick = function() {
   uniqCount = [];
   document.querySelector('#incount').innerText = 0;
   document.querySelector('#totaled').innerText = 0;
-  document.querySelector('#output').classList.remove('disabled');
   document.querySelector('#input').value = '';
   document.querySelector('#result').value = '';
 }
 
+
+
+function init() {
+    document.getElementById("clear").click();
+  }
+
+window.onload = init;
+
+
+
+var keyinput = document.getElementById("input");
+
+keyinput.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("output").click();
+  }
+});
+
+
+
+// ----------------------------------------------
 
 
 function count() {
@@ -73,7 +94,6 @@ function count() {
 
     document.querySelector('#incount').innerText = 0;
     document.querySelector('#totaled').innerText = 0;
-    document.querySelector('#output').classList.remove('disabled');
     text = document.querySelector('#input').value;
 
 
@@ -102,8 +122,6 @@ function count() {
 
 
     if (!dupesFound) return;
-
-    document.querySelector('#output').classList.remove('disabled');
 
     counts = counts.filter(function(count) {
         if (count.count === 1) uniqCount.push(count.line);
