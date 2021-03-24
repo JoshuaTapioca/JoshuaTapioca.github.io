@@ -1,10 +1,33 @@
-var text, counts, uniqCount;
+var pretext, counts, uniqCount;
 
-document.querySelector('#output').onclick = function() {
+document.querySelector('#show_output').onclick = function() {
 
     count();
 
-    text += ",";
+    text = '';
+    temtext1 = '';
+    temtext2 = '';
+    temtext3 = '';
+
+    if (pretext.slice(-1) !== ',') {
+      pretext += ",";
+    }
+
+    var temtext1 = pretext.replace(/、|，/g, ',');
+
+    var temtext2 = temtext1.replace(/,\s/g, '#3#w#q#');
+
+    var temtext3 = temtext2.replace(/\s/g, ',\n');
+
+    var text = temtext3.replace(/#3#w#q#/g, ',\n');
+
+
+    if (!text.replace(/\s|,/g, '').length) {
+      document.querySelector('#incount').innerText = 0;
+      out0count()
+      return;
+    }
+
 
     document.querySelector('#incount').innerText = text.replace(/[^","]/g, "").length;
 
@@ -32,8 +55,7 @@ document.querySelector('#output').onclick = function() {
         uniqueLinesText += uniqueLine + '\n';
     }
 
-
-    document.querySelector('#totaled').innerText = uniqueLines.length - 1;
+//    document.querySelector('#outcount').innerText = uniqueLines.length - 1;
 
 
     var sorting = uniqueLinesText;
@@ -47,29 +69,44 @@ document.querySelector('#output').onclick = function() {
     }
         console.log(sorting);
 
-    document.querySelector('#result').value = sorting.slice(2);
+
+//    if (sorting.slice(3, 4) === ',\n') {
+//    }
+    var sorting = sorting.replace(/^\s+/, "");
+    var sorting = sorting.replace(/^,\s+/, "");
+
+    document.querySelector('#output').value = sorting;
+
+    document.querySelector('#outcount').innerText = sorting.replace(/[^","]/g, "").length;
 
 }
 
 
 
 document.querySelector('#clear').onclick = function() {
-  text = '';
-  counts = [];
-  uniqCount = [];
-  document.querySelector('#incount').innerText = 0;
-  document.querySelector('#totaled').innerText = 0;
-  document.querySelector('#input').value = '';
-  document.querySelector('#result').value = '';
+  clear()
 }
 
 
+function clear() {
+  pretext = '';
+  counts = [];
+  uniqCount = [];
+  document.querySelector('#incount').innerText = 0;
+  document.querySelector('#outcount').innerText = 0;
+  document.querySelector('#input').value = '';
+  document.querySelector('#output').value = '';
+}
+
 
 function init() {
-    document.getElementById("clear").click();
+  document.querySelector('#incount').innerText = 0;
+  document.querySelector('#input').value = '';
+  out0count()
   }
 
 window.onload = init;
+
 
 
 
@@ -80,30 +117,34 @@ window.onload = init;
 // keyinput.addEventListener("keyup", function(event) {
 //   if (event.keyCode === 13) {
 //     event.preventDefault();
-//     document.getElementById("output").click();
+//     document.getElementById("show_output").click();
 //   }
 // });
 
 
+function out0count() {
+  output0count = [];
+  output0count = document.querySelector('#output').value;
+  document.querySelector('#outcount').innerText = output0count.replace(/[^","]/g, "").length;
+}
 
-// ----------------------------------------------
+
 
 
 function count() {
-    text = '';
+    pretext = '';
     counts = [];
     uniqCount = [];
 
     document.querySelector('#incount').innerText = 0;
-    document.querySelector('#totaled').innerText = 0;
-    text = document.querySelector('#input').value;
+    document.querySelector('#outcount').innerText = 0;
+    pretext = document.querySelector('#input').value;
 
 
 
-    if (!text) return;
+    if (!pretext) return;
 
-    var input = text.split('\n');
-    document.querySelector('#totaled').innerText = input.length;
+    var input = pretext.split('\n');
 
     if (input.length <= 1) return;
 
