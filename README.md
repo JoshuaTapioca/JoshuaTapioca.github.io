@@ -1,6 +1,6 @@
 # Words Formatter for YouTube Studio
 
-This can format and rearrange blocked words on YouTube Studio, output is more edit-friendly.
+Format and rearrange the "blocked words" on YouTube Studio. Result is more edit-friendly.
 
 [Demo page (github.io)](https://joshuatapioca.github.io/blocked-words-filter/)
 
